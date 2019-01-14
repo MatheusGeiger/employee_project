@@ -1,6 +1,6 @@
-[submodule "node-employee-api"]
-	path = node-employee-api
-	url = https://matheusgeiger@bitbucket.org/matheusgeiger/node-employee-api.git
 [submodule "angular-cli"]
 	path = angular-cli
 	url = https://matheusgeiger@bitbucket.org/matheusgeiger/angular-cli.git
+[submodule "node-employee-api"]
+	path = node-employee-api
+	url = https://matheusgeiger@bitbucket.org/matheusgeiger/node-employee-api.git
