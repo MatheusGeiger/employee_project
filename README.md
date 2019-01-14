@@ -24,6 +24,8 @@ Git will not download the contents of the submodules when cloning this project. 
 
 ![Submodule Update](/docs/images/submodule_update.png "Submodule Update")
 
+before running project use `git submodule foreach git pull origin` to get the last version of code provided in master branch.
+
 ## RUNNING PROJECT
 
 Using docker you can up the project with command `docker-compose up --build`
