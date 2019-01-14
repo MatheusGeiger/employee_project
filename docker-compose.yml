@@ -1,0 +1,53 @@
+version: '3.3'
+
+services:
+  api:
+    network_mode: bridge
+    container_name: node-employee-api-project
+    command: npm run dev
+    hostname: node-employee-api-project
+    build:
+      context: ./node-employee-api/app
+    volumes:
+      - ./node-employee-api/app:/app
+      - ./node-employee-api/app/node_modules:/app/node_modules
+    links:        
+      - mongo-cubo-project:mongo-cubo-project
+    expose:
+      - 3001
+      - 9229
+    ports:
+      - 3001:3001
+      - 9229:9229
+    environment:
+      LOG_LEVEL: debug
+      MONGODB_ENDPOINT: 'mongodb://mongo-cubo-project:27017/employee'
+      PORT: 3001
+      SECRET: 'superduppersecret'
+  
+  client:
+    network_mode: bridge
+    container_name: angular-cli
+    command: npm run start-dev
+    hostname: angular-cli
+    build:
+      context: ./angular-cli
+    volumes:
+      - ./angular-cli:/angular-cli
+      - ./angular-cli/node_modules:/angular-cli/node_modules
+    expose:
+      - 4200
+    ports:
+      - 4200:4200
+    environment:
+      LOG_LEVEL: debug
+
+  mongo-cubo-project:
+    network_mode: bridge
+    container_name: mongo-cubo-project
+    image: "mongo:3.4-jessie"
+    hostname: mongo-cubo-project
+    ports:
+      - 27017:27017
+    volumes:
+      - ./volumes/mongodb:/data/db
