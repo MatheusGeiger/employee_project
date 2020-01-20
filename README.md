@@ -2,11 +2,13 @@
 
 ## API
 
-https://bitbucket.org/matheusgeiger/node-employee-api/src/master/
+https://github.com/MatheusGeiger/node-employee-api
+
 
 ## CLIENT API
 
-https://bitbucket.org/matheusgeiger/angular-cli/src/master/
+https://github.com/MatheusGeiger/angular-cli
+
 
 ### USAGE
 
