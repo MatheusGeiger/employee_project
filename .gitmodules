@@ -1,8 +1,8 @@
 [submodule "angular-cli"]
 	path = angular-cli
-	url = https://github.com/MatheusGeiger/angular-cli.git
+	url = git@github.com:MatheusGeiger/angular-cli.git
 	branch = master
 [submodule "node-employee-api"]
 	path = node-employee-api
-	url = https://github.com/MatheusGeiger/employee_project.git
+	url = git@github.com:MatheusGeiger/node-employee-api.git
 	branch = master
